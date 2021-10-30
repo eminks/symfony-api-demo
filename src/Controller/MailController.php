@@ -52,7 +52,11 @@ class MailController extends AbstractController
     {
         $user = $this->getDoctrine()->getRepository(User::class)->find($id);
 
+<<<<<<< HEAD
         $transport = Transport::fromDsn('smtp://@smtp.mailtrap.io:2525?encryption=tls&auth_mode=login');
+=======
+        $transport = Transport::fromDsn('smtp://2f68f5cf6cbd19:a98e318915f5c6@smtp.mailtrap.io:2525?encryption=tls&auth_mode=login');
+>>>>>>> 6fcb84e175501370fcc9a95fe7f7fc50b6ffa98a
         $mailer = new Mailer($transport);
 
         $email = (new Email())
